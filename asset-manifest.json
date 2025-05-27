@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/monishsoorya31/Event-Calendar.git/static/css/main.7934940f.css",
-    "main.js": "/monishsoorya31/Event-Calendar.git/static/js/main.ff71b431.js",
-    "static/media/logo.svg": "/monishsoorya31/Event-Calendar.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/monishsoorya31/Event-Calendar.git/index.html",
-    "main.7934940f.css.map": "/monishsoorya31/Event-Calendar.git/static/css/main.7934940f.css.map",
-    "main.ff71b431.js.map": "/monishsoorya31/Event-Calendar.git/static/js/main.ff71b431.js.map"
+    "main.css": "/monishsoorya31/Event-Calendar/static/css/main.7934940f.css",
+    "main.js": "/monishsoorya31/Event-Calendar/static/js/main.c9bbe8ce.js",
+    "static/media/logo.svg": "/monishsoorya31/Event-Calendar/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/monishsoorya31/Event-Calendar/index.html",
+    "main.7934940f.css.map": "/monishsoorya31/Event-Calendar/static/css/main.7934940f.css.map",
+    "main.c9bbe8ce.js.map": "/monishsoorya31/Event-Calendar/static/js/main.c9bbe8ce.js.map"
   },
   "entrypoints": [
     "static/css/main.7934940f.css",
-    "static/js/main.ff71b431.js"
+    "static/js/main.c9bbe8ce.js"
   ]
 }
