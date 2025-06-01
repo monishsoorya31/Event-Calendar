@@ -25,7 +25,7 @@ const Calendar = () => {
     setShowModal(true);
   };
 
-  const handleClose = () => {
+  const handleClose = () =>{
     setShowModal(false);
     setSelectedDate(null);
   };
