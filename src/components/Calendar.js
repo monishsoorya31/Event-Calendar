@@ -25,7 +25,7 @@ const Calendar = () => {
     setShowModal(true);
   };
 
-  const handleClose = () =>{
+  const handleClose = () => {
     setShowModal(false);
     setSelectedDate(null);
   };
@@ -38,7 +38,7 @@ const Calendar = () => {
       >
         &lt;
       </button>
-      <h4 className="mb-0">{format(currentMonth, "MMMM yyyy")}</h4>
+      <h4 className="mb-0">monish {format(currentMonth, "MMMM yyyy")}</h4>
       <button
         className="btn btn-outline-primary"
         onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
@@ -107,10 +107,10 @@ const Calendar = () => {
       days = [];
     }
     const onDateClick = (day) => {
-  console.log("Date clicked:", day);
-  setSelectedDate(day);
-  setShowModal(true);
-};
+      console.log("Date clicked:", day);
+      setSelectedDate(day);
+      setShowModal(true);
+    };
     return <div>{rows}</div>;
   };
 
