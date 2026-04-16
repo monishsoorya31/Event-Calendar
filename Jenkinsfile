@@ -4,7 +4,7 @@ pipeline {
     environment {
         REPO_URL = 'https://github.com/monishsoorya31/Event-Calendar'
         BRANCH = 'main'
-        DEPLOY_USER = 'your-vm-username'
+        DEPLOY_USER = 'soorymonish'
         DEPLOY_HOST = '34.56.203.166'
         DEPLOY_PATH = '/var/www/react-app'
     }
