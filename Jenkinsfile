@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:18'
+        }
+    }
 
     environment {
         REPO_URL = 'https://github.com/monishsoorya31/Event-Calendar'
@@ -10,7 +14,6 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 git branch: "${BRANCH}", url: "${REPO_URL}"
@@ -33,29 +36,12 @@ pipeline {
             steps {
                 sshagent(['gcp-ssh-key']) {
                     sh '''
-                    echo "Creating deployment directory if not exists..."
                     ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir -p ${DEPLOY_PATH}"
-
-                    echo "Cleaning old files..."
                     ssh ${DEPLOY_USER}@${DEPLOY_HOST} "rm -rf ${DEPLOY_PATH}/*"
-
-                    echo "Copying new build..."
                     scp -r build/* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/
-
-                    echo "Deployment done!"
                     '''
                 }
             }
         }
     }
-
-    post {
-        success {
-            echo '✅ Successfully Deployed to GCP VM!'
-        }
-        failure {
-            echo '❌ Deployment Failed!'
-        }
-    }
 }
-
